@@ -9,16 +9,30 @@
 /* Begin PBXBuildFile section */
 		A872DC9D2A2613D700ED665F /* QartyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A872DC9C2A2613D700ED665F /* QartyApp.swift */; };
 		A872DC9F2A2613D700ED665F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A872DC9E2A2613D700ED665F /* ContentView.swift */; };
-		A872DCA12A2613D900ED665F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A872DCA02A2613D900ED665F /* Assets.xcassets */; };
 		A872DCA42A2613D900ED665F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A872DCA32A2613D900ED665F /* Preview Assets.xcassets */; };
+		A872DCAB2A26142700ED665F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A872DCAA2A26142700ED665F /* WelcomeView.swift */; };
+		A872DCAD2A261C4600ED665F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A872DCAC2A261C4600ED665F /* Assets.xcassets */; };
+		A872DCB12A261DF900ED665F /* LogoPlaceholderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A872DCB02A261DF900ED665F /* LogoPlaceholderImage.swift */; };
+		A872DCB32A261E9700ED665F /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A872DCB22A261E9700ED665F /* BorderedViewModifier.swift */; };
+		A872DCB52A261ED100ED665F /* WelcomeBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A872DCB42A261ED100ED665F /* WelcomeBackgroundImage.swift */; };
+		A872DCB72A261EE400ED665F /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A872DCB62A261EE400ED665F /* WelcomeMessageView.swift */; };
+		A872DCB92A26222300ED665F /* HorizontallyAlignedLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A872DCB82A26222300ED665F /* HorizontallyAlignedLabelStyle.swift */; };
+		A872DCBB2A26238900ED665F /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A872DCBA2A26238900ED665F /* LogoImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A872DC992A2613D700ED665F /* Qarty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qarty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A872DC9C2A2613D700ED665F /* QartyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QartyApp.swift; sourceTree = "<group>"; };
 		A872DC9E2A2613D700ED665F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A872DCA02A2613D900ED665F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A872DCA32A2613D900ED665F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A872DCAA2A26142700ED665F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		A872DCAC2A261C4600ED665F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Preview Content/Assets.xcassets"; sourceTree = "<group>"; };
+		A872DCB02A261DF900ED665F /* LogoPlaceholderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPlaceholderImage.swift; sourceTree = "<group>"; };
+		A872DCB22A261E9700ED665F /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
+		A872DCB42A261ED100ED665F /* WelcomeBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackgroundImage.swift; sourceTree = "<group>"; };
+		A872DCB62A261EE400ED665F /* WelcomeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageView.swift; sourceTree = "<group>"; };
+		A872DCB82A26222300ED665F /* HorizontallyAlignedLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontallyAlignedLabelStyle.swift; sourceTree = "<group>"; };
+		A872DCBA2A26238900ED665F /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +67,8 @@
 			children = (
 				A872DC9C2A2613D700ED665F /* QartyApp.swift */,
 				A872DC9E2A2613D700ED665F /* ContentView.swift */,
-				A872DCA02A2613D900ED665F /* Assets.xcassets */,
+				A872DCAE2A261DCD00ED665F /* Welcome */,
+				A872DCAC2A261C4600ED665F /* Assets.xcassets */,
 				A872DCA22A2613D900ED665F /* Preview Content */,
 			);
 			path = Qarty;
@@ -65,6 +80,28 @@
 				A872DCA32A2613D900ED665F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A872DCAE2A261DCD00ED665F /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				A872DCAF2A261DD900ED665F /* Components */,
+				A872DCAA2A26142700ED665F /* WelcomeView.swift */,
+				A872DCB82A26222300ED665F /* HorizontallyAlignedLabelStyle.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		A872DCAF2A261DD900ED665F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A872DCB02A261DF900ED665F /* LogoPlaceholderImage.swift */,
+				A872DCBA2A26238900ED665F /* LogoImage.swift */,
+				A872DCB42A261ED100ED665F /* WelcomeBackgroundImage.swift */,
+				A872DCB62A261EE400ED665F /* WelcomeMessageView.swift */,
+				A872DCB22A261E9700ED665F /* BorderedViewModifier.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A872DCA42A2613D900ED665F /* Preview Assets.xcassets in Resources */,
-				A872DCA12A2613D900ED665F /* Assets.xcassets in Resources */,
+				A872DCAD2A261C4600ED665F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A872DCB12A261DF900ED665F /* LogoPlaceholderImage.swift in Sources */,
 				A872DC9F2A2613D700ED665F /* ContentView.swift in Sources */,
+				A872DCB92A26222300ED665F /* HorizontallyAlignedLabelStyle.swift in Sources */,
+				A872DCBB2A26238900ED665F /* LogoImage.swift in Sources */,
+				A872DCB52A261ED100ED665F /* WelcomeBackgroundImage.swift in Sources */,
+				A872DCAB2A26142700ED665F /* WelcomeView.swift in Sources */,
+				A872DCB32A261E9700ED665F /* BorderedViewModifier.swift in Sources */,
 				A872DC9D2A2613D700ED665F /* QartyApp.swift in Sources */,
+				A872DCB72A261EE400ED665F /* WelcomeMessageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

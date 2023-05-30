@@ -24,9 +24,9 @@ final class UserManager: ObservableObject {
     }
     
     init(userName: String, password: String) {
-        isRegistered = userName.isEmpty == false
-        profile.userName = userName
-        profile.password = password
+        isRegistered = userName.isEmpty == false && password.isEmpty == false
+        self.profile.userName = userName
+        self.profile.password = password
     }
     
     func setRegistered() {
@@ -63,17 +63,16 @@ final class UserManager: ObservableObject {
     }
     
     // MARK: validation not yet implemented
-    func isUsernameValid() -> Bool {
+    func isUserNameValid() -> Bool {
         return profile.userName.count >= 3
     }
     
     func isPasswordValid() -> Bool {
-        guard profile.password.count < 3 else {
+        guard profile.password.count >= 3 else {
             print("password size smaller than 3")
             return false
         }
-        
+
         return true
     }
-    
 }

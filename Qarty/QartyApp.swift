@@ -9,9 +9,24 @@ import SwiftUI
 
 @main
 struct QartyApp: App {
+    let userManager = UserManager()
+    
+    init() {
+        userManager.load()
+    }
     var body: some Scene {
         WindowGroup {
-            WelcomeView()
+            RegisterView()
+                .environmentObject(userManager)
         }
+    }
+}
+
+struct KuchiApp_Previews: PreviewProvider {
+    static let userManager = UserManager(userName: "Irakli", password: "Password")
+    
+    static var previews: some View {
+        RegisterView()
+            .environmentObject(userManager)
     }
 }

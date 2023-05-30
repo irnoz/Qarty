@@ -11,7 +11,7 @@ struct WelcomeBackgroundImage: View {
     var body: some View {
       Image("qarty-background")
         .resizable()
-        .opacity(0.2)
+        .opacity(0.15)
         .ignoresSafeArea(.all)
         .blur(radius: 5)
 //        .aspectRatio(1 / 1, contentMode: .fill)

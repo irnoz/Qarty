@@ -10,7 +10,7 @@ import SwiftUI
 struct WelcomeMessageView: View {
     var body: some View {
         Label {
-            VStack {
+            VStack(alignment: .leading) {
                 Text("Welcome to")
                     .font(.headline)
                     .bold()

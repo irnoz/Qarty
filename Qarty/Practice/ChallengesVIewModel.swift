@@ -53,87 +53,87 @@ class ChallengesViewModel: ObservableObject {
         Challenge(question: "უკაცრავად", pronunciation: "Ukacravad", answer: "Excuse me"),
         Challenge(question: "მადლობა", pronunciation: "Madloba", answer: "Thank you"),
         Challenge(question: "ბოდიში", pronunciation: "Bodishi", answer: "Sorry")
-      ]
+    ]
     
     var allAnswers: [String] { return Self.challenges.map { $0.answer }}
     var correctAnswers: [Challenge] = []
     var wrongAnswers: [Challenge] = []
     @AppStorage("numberOfQuestions") private(set) var numberOfQuestions = 6
-
+    
     var numberOfAnswered: Int { return correctAnswers.count }
     @Published var currentChallenge: ChallengeTest?
     
     init() {
-      generateRandomChallenge()
+        generateRandomChallenge()
     }
     
     func getRandomAnswers(count: Int, including includedAnswer: String) -> [String] {
-      let answers = allAnswers
-      
-      // If there are not enough answers, return them all
-      guard count < answers.count else {
-        return answers.shuffled()
-      }
-      
-      var randomAnswers = Set<String>()
-      randomAnswers.insert(includedAnswer)
-      while randomAnswers.count < count {
-        guard let randomAnswer = answers.randomElement() else { continue }
-        randomAnswers.insert(randomAnswer)
-      }
-      
-      return Array(randomAnswers).shuffled()
+        let answers = allAnswers
+        
+        // If there are not enough answers, return them all
+        guard count < answers.count else {
+            return answers.shuffled()
+        }
+        
+        var randomAnswers = Set<String>()
+        randomAnswers.insert(includedAnswer)
+        while randomAnswers.count < count {
+            guard let randomAnswer = answers.randomElement() else { continue }
+            randomAnswers.insert(randomAnswer)
+        }
+        
+        return Array(randomAnswers).shuffled()
     }
     
     func generateRandomChallenge() {
-      if correctAnswers.count < numberOfQuestions {
-        currentChallenge = getRandomChallenge()
-      } else {
-        currentChallenge = nil
-      }
+        if correctAnswers.count < numberOfQuestions {
+            currentChallenge = getRandomChallenge()
+        } else {
+            currentChallenge = nil
+        }
     }
     
     func restart() {
-      correctAnswers = []
-      wrongAnswers = []
-      generateRandomChallenge()
+        correctAnswers = []
+        wrongAnswers = []
+        generateRandomChallenge()
     }
     
     private func getRandomChallenge() -> ChallengeTest? {
-      return getRandomChallenges(count: 1).first
+        return getRandomChallenges(count: 1).first
     }
     
     private func getRandomChallenges(count: Int) -> [ChallengeTest] {
-      let challenges = Self.challenges.filter { $0.completed == false }
-      var randomChallenges: Set<Challenge>
-      
-      // If there are not enough challenges, return them all
-      
-      if challenges.count < count {
-        randomChallenges = Set(challenges)
-      } else {
-        randomChallenges = Set()
-        while randomChallenges.count < count {
-          guard let randomChallenge = challenges.randomElement() else { continue }
-          randomChallenges.insert(randomChallenge)
+        let challenges = Self.challenges.filter { $0.completed == false }
+        var randomChallenges: Set<Challenge>
+        
+        // If there are not enough challenges, return them all
+        
+        if challenges.count < count {
+            randomChallenges = Set(challenges)
+        } else {
+            randomChallenges = Set()
+            while randomChallenges.count < count {
+                guard let randomChallenge = challenges.randomElement() else { continue }
+                randomChallenges.insert(randomChallenge)
+            }
         }
-      }
-      
-      let tests = randomChallenges.map({
-        ChallengeTest(
-          challenge: $0,
-          answers: getRandomAnswers(count: 3, including: $0.answer)
-        )
-      })
-      
-      return tests.shuffled()
+        
+        let tests = randomChallenges.map({
+            ChallengeTest(
+                challenge: $0,
+                answers: getRandomAnswers(count: 3, including: $0.answer)
+            )
+        })
+        
+        return tests.shuffled()
     }
     
     func saveCorrectAnswer(for challenge: Challenge) {
-      correctAnswers.append(challenge)
+        correctAnswers.append(challenge)
     }
     
     func saveWrongAnswer(for challenge: Challenge) {
-      wrongAnswers.append(challenge)
+        wrongAnswers.append(challenge)
     }
 }

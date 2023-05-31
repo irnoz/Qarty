@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State var selectedTab = 0
     @EnvironmentObject var userManager: UserManager
+    @EnvironmentObject var challengesViewModel: ChallengesViewModel
     @AppStorage("learningEnabled") var learningEnabled: Bool = true
     
     var body: some View {
@@ -24,6 +25,19 @@ struct HomeView: View {
                     })
                     .tag(0)
             }
+            
+            PracticeView(
+                challengeTest: $challengesViewModel.currentChallenge,
+                userName: $userManager.profile.userName,
+                numberOfAnswered: .constant(challengesViewModel.numberOfAnswered)
+            )
+            .tabItem({
+                VStack {
+                    Image(systemName: "rectangle.dock")
+                    Text("Challenge")
+                }
+            })
+            .tag(1)
             
             SettingsView()
                 .tabItem({

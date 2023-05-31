@@ -11,42 +11,47 @@ struct WelcomeView: View {
     @State var startPractice = false
     @EnvironmentObject var userManager: UserManager
     
+    @ViewBuilder
     var body: some View {
-        ZStack {
-            WelcomeBackgroundImage()
-            VStack(alignment: .center) {
-                HStack {
+        if startPractice {
+            HomeView()
+        } else {
+            ZStack {
+                WelcomeBackgroundImage()
+                VStack(alignment: .center) {
+                    HStack {
+                        Spacer()
+                        Button {
+                            userManager.clear()
+                        } label: {
+                            HStack {
+                                Text("Log Out")
+                            }
+                        }
+                        .padding(.trailing)
+                    }
+                    
                     Spacer()
+                    
+                    Text(verbatim: "Hello, \(userManager.profile.userName)!")
+                    
+                    WelcomeMessageView()
+                    
                     Button {
-                        userManager.clear()
+                        startPractice.toggle()
                     } label: {
                         HStack {
-                            Text("Log Out")
+                            Image(systemName: "play")
+                            Text("Start Practice")
                         }
                     }
-                    .padding(.trailing)
-                }
-                
-                Spacer()
-                
-                Text(verbatim: "Hello, \(userManager.profile.userName)!")
                     
-                WelcomeMessageView()
-                
-                Button {
-                    startPractice.toggle()
-                } label: {
-                    HStack {
-                        Image(systemName: "play")
-                        Text("Start Practice")
-                    }
+                    Spacer()
+                    
                 }
-                
-                Spacer()
-                
+                .bold()
+                .foregroundColor(.red)
             }
-            .bold()
-            .foregroundColor(.red)
         }
     }
 }

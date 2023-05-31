@@ -13,7 +13,7 @@ struct StarterView: View {
   @ViewBuilder
   var body: some View {
     if userViewModel.isRegistered {
-      WelcomeView(userManager: userViewModel)
+      WelcomeView()
     } else {
       RegisterView()
     }

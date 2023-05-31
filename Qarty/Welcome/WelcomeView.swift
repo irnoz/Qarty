@@ -9,12 +9,26 @@ import SwiftUI
 
 struct WelcomeView: View {
     @State var startPractice = false
-    var userManager: UserManager
+    @EnvironmentObject var userManager: UserManager
     
     var body: some View {
         ZStack {
             WelcomeBackgroundImage()
             VStack(alignment: .center) {
+                HStack {
+                    Spacer()
+                    Button {
+                        userManager.clear()
+                    } label: {
+                        HStack {
+                            Text("Log Out")
+                        }
+                    }
+                    .padding(.trailing)
+                }
+                
+                Spacer()
+                
                 Text(verbatim: "Hello, \(userManager.profile.userName)!")
                     
                 WelcomeMessageView()
@@ -27,6 +41,9 @@ struct WelcomeView: View {
                         Text("Start Practice")
                     }
                 }
+                
+                Spacer()
+                
             }
             .bold()
             .foregroundColor(.red)
@@ -35,9 +52,8 @@ struct WelcomeView: View {
 }
 
 struct WelcomeView_Previews: PreviewProvider {
-    static var userManager = UserManager(userName: "Mariam", password: "Password")
-    
     static var previews: some View {
-        WelcomeView(userManager: userManager)
+        WelcomeView()
+            .environmentObject(UserManager())
     }
 }

@@ -10,23 +10,26 @@ import SwiftUI
 @main
 struct QartyApp: App {
     let userManager = UserManager()
+    @AppStorage("appearance") var appearance: Appearance = .automatic
     
     init() {
         userManager.load()
     }
     var body: some Scene {
         WindowGroup {
-            RegisterView()
+            StarterView()
                 .environmentObject(userManager)
+                .environmentObject(ChallengesViewModel())
+                .preferredColorScheme(appearance.getColorScheme())
         }
     }
 }
 
-struct KuchiApp_Previews: PreviewProvider {
+struct QartyApp_Previews: PreviewProvider {
     static let userManager = UserManager(userName: "Irakli", password: "Password")
     
     static var previews: some View {
-        RegisterView()
+        StarterView()
             .environmentObject(userManager)
     }
 }

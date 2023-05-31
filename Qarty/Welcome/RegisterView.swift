@@ -80,7 +80,7 @@ struct RegisterView: View {
             }
             .padding(.bottom)
             
-            Button(action: self.registerUser) {
+            Button(action: registerUser) {
                 HStack {
                     Image(systemName: "checkmark")
                         .resizable()
@@ -104,7 +104,7 @@ struct RegisterView: View {
 // MARK: - Event Handlers
 extension RegisterView {
     func registerUser() {
-        userNameFieldFocused = false
+        passwordFieldFocused = false
         
         if userManager.settings.rememberUser {
             userManager.persistProfile()

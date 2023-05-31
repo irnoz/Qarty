@@ -36,6 +36,13 @@
 		A872DCE92A278FB500ED665F /* DeckVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A872DCE82A278FB500ED665F /* DeckVIew.swift */; };
 		A872DCEB2A278FCA00ED665F /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A872DCEA2A278FCA00ED665F /* LearnView.swift */; };
 		A872DCEE2A27906000ED665F /* ChallengesVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A872DCED2A27906000ED665F /* ChallengesVIewModel.swift */; };
+		A8EB06B02A27BA700032F0AC /* ScoreVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB06AF2A27BA700032F0AC /* ScoreVIew.swift */; };
+		A8EB06B22A27BB2F0032F0AC /* ChoicesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB06B12A27BB2F0032F0AC /* ChoicesRow.swift */; };
+		A8EB06B42A27BB6A0032F0AC /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB06B32A27BB6A0032F0AC /* QuestionView.swift */; };
+		A8EB06B62A27BB820032F0AC /* ChoicesVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB06B52A27BB820032F0AC /* ChoicesVIew.swift */; };
+		A8EB06B82A27BB9D0032F0AC /* PracticeVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB06B72A27BB9D0032F0AC /* PracticeVIew.swift */; };
+		A8EB06BA2A27BBB70032F0AC /* ChallengeVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB06B92A27BBB70032F0AC /* ChallengeVIew.swift */; };
+		A8EB06BC2A27BBE80032F0AC /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB06BB2A27BBE80032F0AC /* CongratulationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +76,13 @@
 		A872DCE82A278FB500ED665F /* DeckVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckVIew.swift; sourceTree = "<group>"; };
 		A872DCEA2A278FCA00ED665F /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		A872DCED2A27906000ED665F /* ChallengesVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesVIewModel.swift; sourceTree = "<group>"; };
+		A8EB06AF2A27BA700032F0AC /* ScoreVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreVIew.swift; sourceTree = "<group>"; };
+		A8EB06B12A27BB2F0032F0AC /* ChoicesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesRow.swift; sourceTree = "<group>"; };
+		A8EB06B32A27BB6A0032F0AC /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		A8EB06B52A27BB820032F0AC /* ChoicesVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesVIew.swift; sourceTree = "<group>"; };
+		A8EB06B72A27BB9D0032F0AC /* PracticeVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeVIew.swift; sourceTree = "<group>"; };
+		A8EB06B92A27BBB70032F0AC /* ChallengeVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeVIew.swift; sourceTree = "<group>"; };
+		A8EB06BB2A27BBE80032F0AC /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +143,6 @@
 			children = (
 				A872DCAF2A261DD900ED665F /* Components */,
 				A872DCAA2A26142700ED665F /* WelcomeView.swift */,
-				A872DCB82A26222300ED665F /* HorizontallyAlignedLabelStyle.swift */,
 				A872DCCA2A263DEA00ED665F /* RegisterView.swift */,
 			);
 			path = Welcome;
@@ -142,7 +155,6 @@
 				A872DCBA2A26238900ED665F /* LogoImage.swift */,
 				A872DCB42A261ED100ED665F /* WelcomeBackgroundImage.swift */,
 				A872DCB62A261EE400ED665F /* WelcomeMessageView.swift */,
-				A872DCB22A261E9700ED665F /* BorderedViewModifier.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -161,6 +173,8 @@
 		A872DCC72A263BB800ED665F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A872DCB22A261E9700ED665F /* BorderedViewModifier.swift */,
+				A872DCB82A26222300ED665F /* HorizontallyAlignedLabelStyle.swift */,
 				A872DCC82A263BE700ED665F /* String+Extension.swift */,
 				A872DCD72A27694F00ED665F /* Appearance.swift */,
 				A872DCD92A276EF300ED665F /* LocalNotifications.swift */,
@@ -210,6 +224,13 @@
 			isa = PBXGroup;
 			children = (
 				A872DCED2A27906000ED665F /* ChallengesVIewModel.swift */,
+				A8EB06B12A27BB2F0032F0AC /* ChoicesRow.swift */,
+				A8EB06AF2A27BA700032F0AC /* ScoreVIew.swift */,
+				A8EB06B32A27BB6A0032F0AC /* QuestionView.swift */,
+				A8EB06B52A27BB820032F0AC /* ChoicesVIew.swift */,
+				A8EB06B72A27BB9D0032F0AC /* PracticeVIew.swift */,
+				A8EB06B92A27BBB70032F0AC /* ChallengeVIew.swift */,
+				A8EB06BB2A27BBE80032F0AC /* CongratulationsView.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -285,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A872DCE92A278FB500ED665F /* DeckVIew.swift in Sources */,
+				A8EB06B22A27BB2F0032F0AC /* ChoicesRow.swift in Sources */,
 				A872DCB12A261DF900ED665F /* LogoPlaceholderImage.swift in Sources */,
 				A872DCD82A27694F00ED665F /* Appearance.swift in Sources */,
 				A872DCB92A26222300ED665F /* HorizontallyAlignedLabelStyle.swift in Sources */,
@@ -293,6 +315,9 @@
 				A872DCCB2A263DEA00ED665F /* RegisterView.swift in Sources */,
 				A872DCE32A278EBF00ED665F /* FlashDeck.swift in Sources */,
 				A872DCC62A263B6500ED665F /* Validation.swift in Sources */,
+				A8EB06B42A27BB6A0032F0AC /* QuestionView.swift in Sources */,
+				A8EB06B62A27BB820032F0AC /* ChoicesVIew.swift in Sources */,
+				A8EB06BC2A27BBE80032F0AC /* CongratulationsView.swift in Sources */,
 				A872DCD62A27680000ED665F /* SettingsView.swift in Sources */,
 				A872DCB52A261ED100ED665F /* WelcomeBackgroundImage.swift in Sources */,
 				A872DCAB2A26142700ED665F /* WelcomeView.swift in Sources */,
@@ -300,11 +325,14 @@
 				A872DCC92A263BE700ED665F /* String+Extension.swift in Sources */,
 				A872DCDC2A276F3700ED665F /* Color+Extension.swift in Sources */,
 				A872DCE12A278E3300ED665F /* FlashCard.swift in Sources */,
+				A8EB06B82A27BB9D0032F0AC /* PracticeVIew.swift in Sources */,
 				A872DCB32A261E9700ED665F /* BorderedViewModifier.swift in Sources */,
 				A872DC9D2A2613D700ED665F /* QartyApp.swift in Sources */,
 				A872DCCD2A26468A00ED665F /* StarterView.swift in Sources */,
 				A872DCC02A26336600ED665F /* Profile.swift in Sources */,
 				A872DCE52A278F6900ED665F /* LearningStore.swift in Sources */,
+				A8EB06B02A27BA700032F0AC /* ScoreVIew.swift in Sources */,
+				A8EB06BA2A27BBB70032F0AC /* ChallengeVIew.swift in Sources */,
 				A872DCDA2A276EF300ED665F /* LocalNotifications.swift in Sources */,
 				A872DCD32A27677100ED665F /* HomeView.swift in Sources */,
 				A872DCBE2A26335400ED665F /* UserManager.swift in Sources */,

@@ -85,25 +85,6 @@ struct SettingsView: View {
     }
 }
 
-//struct AppearanceSection: View {
-//    var body: some View {
-//        Section(header: Text("Appearance")) {
-//          VStack(alignment: .leading) {
-//            Picker("", selection: $appearance) {
-//              ForEach(Appearance.allCases) { appearance in
-//                Text(appearance.name).tag(appearance)
-//              }          }
-//            .pickerStyle(SegmentedPickerStyle())
-//
-//            ColorPicker(
-//              "Card Background Color",
-//              selection: $cardBackgroundColor
-//            )
-//          }
-//        }
-//    }
-//}
-
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()

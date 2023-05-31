@@ -68,11 +68,12 @@ final class UserManager: ObservableObject {
     }
     
     func isPasswordValid() -> Bool {
-        guard profile.password.count >= 3 else {
-            print("password size smaller than 3")
-            return false
-        }
-
-        return true
+        return profile.password.count >= 3
+//        guard profile.password.count >= 3 else {
+//            print("password size smaller than 3")
+//            return false
+//        }
+//
+//        return true
     }
 }

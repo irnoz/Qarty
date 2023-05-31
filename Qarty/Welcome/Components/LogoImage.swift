@@ -15,9 +15,9 @@ struct LogoImage: View {
 //            .overlay(Ellipse().stroke(Color.gray, lineWidth: 1))
 //            .background(Color(white: 0.95))
 //            .clipShape(Ellipse())
-            .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(Color.gray, lineWidth: 1))
+            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.gray, lineWidth: 1))
             .background(Color(white: 0.95))
-            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
     }
 }
 

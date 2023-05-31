@@ -9,12 +9,13 @@ import SwiftUI
 
 struct WelcomeView: View {
     @State var startPractice = false
+    var userManager: UserManager
     
     var body: some View {
         ZStack {
             WelcomeBackgroundImage()
             VStack(alignment: .center) {
-                Text(verbatim: "Hello, New User!")
+                Text(verbatim: "Hello, \(userManager.profile.userName)!")
                     
                 WelcomeMessageView()
                 
@@ -34,7 +35,9 @@ struct WelcomeView: View {
 }
 
 struct WelcomeView_Previews: PreviewProvider {
+    static var userManager = UserManager(userName: "Mariam", password: "Password")
+    
     static var previews: some View {
-        WelcomeView()
+        WelcomeView(userManager: userManager)
     }
 }

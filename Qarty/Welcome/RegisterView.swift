@@ -39,18 +39,15 @@ struct RegisterView: View {
                 Group {
                     if isSecured {
                         SecureField("Type your password...", text: $userManager.profile.password)
-                            .focused($passwordFieldFocused)
-                            .submitLabel(.done)
-                            .onSubmit(registerUser)
-                            .bordered()
                     } else {
                         TextField("Type your password...", text: $userManager.profile.password)
-                            .focused($passwordFieldFocused)
-                            .submitLabel(.done)
-                            .onSubmit(registerUser)
-                            .bordered()
                     }
-                }.padding(.trailing, 32)
+                }
+                .padding(.trailing, 32)
+                .focused($passwordFieldFocused)
+                .submitLabel(.done)
+                .onSubmit(registerUser)
+                .bordered()
 
                 Button(action: {
                     isSecured.toggle()
@@ -58,6 +55,7 @@ struct RegisterView: View {
                     Image(systemName: self.isSecured ? "eye.slash" : "eye")
                         .accentColor(.gray)
                 }
+                .padding(.trailing, 5)
             }
             
             HStack {

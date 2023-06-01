@@ -16,6 +16,7 @@ struct ScoreView: View {
             Text("\(numberOfAnswered)/\(numberOfQuestions)")
                 .font(.caption)
                 .padding(4)
+                .foregroundColor(.red)
             Spacer()
         }
     }

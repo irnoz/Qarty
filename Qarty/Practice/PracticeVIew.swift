@@ -26,14 +26,14 @@ struct PracticeView: View {
 struct PracticeView_Previews: PreviewProvider {
     @State static var numberOfAnswered: Int = 0
     static let challengeTest = ChallengeTest(
-        challenge: Challenge(question: "おねがい　します", pronunciation: "Onegai shimasu", answer: "Please"),
+        challenge: Challenge(question: "კი", pronunciation: "Ki", answer: "Yes"),
         answers: ["Thank you", "Hello", "Goodbye"]
     )
     
     static var previews: some View {
         return PracticeView(
             challengeTest: .constant(challengeTest),
-            userName: .constant("Johnny Swift"),
+            userName: .constant("Irakli"),
             numberOfAnswered: $numberOfAnswered
         )
     }

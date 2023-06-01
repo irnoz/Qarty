@@ -65,8 +65,8 @@ struct ChallengeView_Previews: PreviewProvider {
     @State static var numberOfAnswered: Int = 0
     static let challengeTest = ChallengeTest(
         challenge: Challenge(
-            question: "おねがい　します",
-            pronunciation: "Onegai shimasu",
+            question: "გთხოვ",
+            pronunciation: "Gthkhov",
             answer: "Please"
         ),
         answers: ["Thank you", "Hello", "Goodbye"]

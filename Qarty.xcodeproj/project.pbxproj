@@ -213,8 +213,7 @@
 		A872DCDF2A278E0400ED665F /* LearnView */ = {
 			isa = PBXGroup;
 			children = (
-				A872DCE62A278FA500ED665F /* CardView.swift */,
-				A872DCE82A278FB500ED665F /* DeckVIew.swift */,
+				A8EB06BE2A2881960032F0AC /* Components */,
 				A872DCEA2A278FCA00ED665F /* LearnView.swift */,
 			);
 			path = LearnView;
@@ -223,16 +222,33 @@
 		A872DCEC2A278FE200ED665F /* Practice */ = {
 			isa = PBXGroup;
 			children = (
+				A8EB06BD2A2880BC0032F0AC /* Components */,
 				A872DCED2A27906000ED665F /* ChallengesVIewModel.swift */,
-				A8EB06B12A27BB2F0032F0AC /* ChoicesRow.swift */,
-				A8EB06AF2A27BA700032F0AC /* ScoreVIew.swift */,
-				A8EB06B32A27BB6A0032F0AC /* QuestionView.swift */,
-				A8EB06B52A27BB820032F0AC /* ChoicesVIew.swift */,
 				A8EB06B72A27BB9D0032F0AC /* PracticeVIew.swift */,
 				A8EB06B92A27BBB70032F0AC /* ChallengeVIew.swift */,
 				A8EB06BB2A27BBE80032F0AC /* CongratulationsView.swift */,
 			);
 			path = Practice;
+			sourceTree = "<group>";
+		};
+		A8EB06BD2A2880BC0032F0AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A8EB06B12A27BB2F0032F0AC /* ChoicesRow.swift */,
+				A8EB06AF2A27BA700032F0AC /* ScoreVIew.swift */,
+				A8EB06B32A27BB6A0032F0AC /* QuestionView.swift */,
+				A8EB06B52A27BB820032F0AC /* ChoicesVIew.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A8EB06BE2A2881960032F0AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A872DCE62A278FA500ED665F /* CardView.swift */,
+				A872DCE82A278FB500ED665F /* DeckVIew.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

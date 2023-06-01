@@ -49,7 +49,7 @@ struct DeckView: View {
                 get: { Color(rgba: cardBackgroundColorInt) },
                 set: { newValue in cardBackgroundColorInt = newValue.asRgba }
             ), onDrag: { card, direction in
-                if direction == .left {
+                if direction == .right {
                     onMemorized()
                     
                 }

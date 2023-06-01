@@ -14,8 +14,8 @@ struct LearnView: View {
         VStack {
             
             
-            Text("Swipe left if you remembered"
-                 + "\nSwipe right if you didn’t.")
+            Text("Swipe right if you remembered"
+                 + "\nSwipe left if you didn’t.")
             .font(.headline)
             .foregroundColor(.red)
             .bordered()
@@ -29,10 +29,7 @@ struct LearnView: View {
             )
             
             Button {
-                
-//                learningStore.deck.cards.forEach { card in
-//
-//                }
+                //MARK: Implement Restart Deck Functionality
             } label: {
                 HStack {
                     Image(systemName: "gobackward")

@@ -84,8 +84,8 @@ struct CardView_Previews: PreviewProvider {
   static var previews: some View {
     let card = FlashCard(
       card: Challenge(
-        question: "こんにちわ",
-        pronunciation: "Konnichiwa",
+        question: "გამარჯობა",
+        pronunciation: "Gamarjoba",
         answer: "Hello"
       )
     )

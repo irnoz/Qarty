@@ -9,15 +9,19 @@ import SwiftUI
 
 struct LearnView: View {
     @StateObject var learningStore = LearningStore(deck: ChallengesViewModel.challenges)
-
+    
     var body: some View {
         VStack {
-            Spacer()
+            
             
             Text("Swipe left if you remembered"
-                 + "\nSwipe right if you didn’t")
+                 + "\nSwipe right if you didn’t.")
             .font(.headline)
             .foregroundColor(.red)
+            .bordered()
+            .padding(.all)
+            
+            Spacer()
             
             DeckView(
                 deck: learningStore.deck,
@@ -26,6 +30,9 @@ struct LearnView: View {
             
             Button {
                 
+//                learningStore.deck.cards.forEach { card in
+//
+//                }
             } label: {
                 HStack {
                     Image(systemName: "gobackward")
@@ -33,6 +40,7 @@ struct LearnView: View {
                 }
                 .foregroundColor(.red)
             }
+            .bordered()
             .padding(.all)
             
             Spacer()

@@ -74,7 +74,7 @@ struct CongratulationsView: View {
 
 struct CongratulationsView_Previews: PreviewProvider {
     static var previews: some View {
-        CongratulationsView(userName: "Johnny Swift")
+        CongratulationsView(userName: "Dear Player")
             .environmentObject(ChallengesViewModel())
     }
 }

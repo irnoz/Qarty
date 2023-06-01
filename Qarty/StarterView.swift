@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct StarterView: View {
-    @EnvironmentObject var userViewModel: UserManager
+    @EnvironmentObject var userManager: UserManager
     
     @ViewBuilder
     var body: some View {
-        if userViewModel.isRegistered {
-            WelcomeView()
-        } else {
-            RegisterView()
+        VStack {
+            HStack {
+                Spacer()
+                Button {
+                    userManager.clear()
+                } label: {
+                    HStack {
+                        Text("Log Out")
+                    }
+                }
+//                .bordered()
+                .foregroundColor(.red)
+                .padding(.trailing)
+            }
+            
+            if userManager.isRegistered {
+                WelcomeView()
+            } else {
+                RegisterView()
+            }
         }
     }
 }

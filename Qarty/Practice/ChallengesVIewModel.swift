@@ -48,7 +48,7 @@ class ChallengesViewModel: ObservableObject {
         Challenge(question: "არა", pronunciation: "Ara", answer: "No"),
         Challenge(question: "გთხოვ", pronunciation: "Gthkhov", answer: "Please"),
         Challenge(question: "გამარჯობა", pronunciation: "Gamarjoba", answer: "Hello"),
-        Challenge(question: "სასიამოვნოა თქვენი გაცნობა", pronunciation: "Sasiamovnoa Tqveni Gacnoba", answer: "Nice to meet you"),
+        Challenge(question: "სასიამოვნოა თქვენი გაცნობა", pronunciation: "Sasiamovnoa Tqveni Gatsnoba", answer: "Nice to meet you"),
         Challenge(question: "სალამი", pronunciation: "Salami", answer: "Hello"),
         Challenge(question: "უკაცრავად", pronunciation: "Ukacravad", answer: "Excuse me"),
         Challenge(question: "მადლობა", pronunciation: "Madloba", answer: "Thank you"),

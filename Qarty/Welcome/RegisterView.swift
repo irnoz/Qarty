@@ -14,7 +14,6 @@ struct RegisterView: View {
     @State var isSecured: Bool = true
     
     var body: some View {
-        
         VStack {
             Spacer()
             

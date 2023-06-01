@@ -19,18 +19,6 @@ struct WelcomeView: View {
             ZStack {
                 WelcomeBackgroundImage()
                 VStack(alignment: .center) {
-                    HStack {
-                        Spacer()
-                        Button {
-                            userManager.clear()
-                        } label: {
-                            HStack {
-                                Text("Log Out")
-                            }
-                        }
-                        .padding(.trailing)
-                    }
-                    
                     Spacer()
                     
                     Text(verbatim: "Hello, \(userManager.profile.userName)!")

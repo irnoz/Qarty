@@ -60,6 +60,7 @@ final class UserManager: ObservableObject {
     
     func clear() {
         UserDefaults.standard.removeObject(forKey: "user-profile")
+        isRegistered = false
     }
     
     // MARK: validation not yet implemented

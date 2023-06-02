@@ -12,15 +12,18 @@ Qarty is an application 📱 built to demonstrate use and knowledge of Swift pro
 
 This project aims to demonstrate the use of SWiftUI and Combine frameworks.
 The app provides User friendly interface and beautiful animations to display flashcards that help users quickly learn new words in georgian language.
+
 <img src=https://github.com/irnoz/Qarty/assets/58843342/72ea59db-2422-4df0-946e-1f10bde60a0f width="200" height="400"/>
 <img src=https://github.com/irnoz/Qarty/assets/58843342/a707f431-4495-48df-b032-2fc4ab072369 width="200" height="400"/>
 
 Qarty also provides challenges to check users knowledge and memory (number of challenges can be adjusted from settings).
+
 <img src=https://github.com/irnoz/Qarty/assets/58843342/d7ff4412-061f-48c6-99ee-974a1bc81d72 width="200" height="400"/>
 <img src=https://github.com/irnoz/Qarty/assets/58843342/2decdf01-a7ef-4d28-b4d9-73e2ad189f40 width="200" height="400"/>
 <img src=https://github.com/irnoz/Qarty/assets/58843342/4a5fa73f-a968-4601-8445-2633e9493435 width="200" height="400"/>
 
 The app contains adjustable settings and the ability to set daily reminders so that you'll never forget to practice.
+
 <img src=https://github.com/irnoz/Qarty/assets/58843342/bbe7df8f-a8ee-41f0-90d6-8b9e30f0c322 width="200" height="400"/>
 
 Qarty also comes with user friendly log in screen and great username and password validation😃

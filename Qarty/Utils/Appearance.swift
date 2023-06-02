@@ -10,7 +10,7 @@ import SwiftUI
 enum Appearance: Int, CaseIterable, Identifiable {
   case light, dark, automatic
 
-  var id: Int { self.rawValue }
+  var id: Int { self.rawValue } // swiftlint:disable:this identifier_name
 
   var name: String {
     switch self {
@@ -19,7 +19,7 @@ enum Appearance: Int, CaseIterable, Identifiable {
     case .automatic: return "Automatic"
     }
   }
-  
+
   func getColorScheme() -> ColorScheme? {
     switch self {
     case .automatic: return nil
@@ -28,4 +28,3 @@ enum Appearance: Int, CaseIterable, Identifiable {
     }
   }
 }
-

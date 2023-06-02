@@ -11,7 +11,7 @@ import SwiftUI
 struct QartyApp: App {
     let userManager = UserManager()
     @AppStorage("appearance") var appearance: Appearance = .automatic
-    
+
     init() {
         userManager.load()
     }
@@ -27,7 +27,7 @@ struct QartyApp: App {
 
 struct QartyApp_Previews: PreviewProvider {
     static let userManager = UserManager(userName: "Irakli", password: "Password")
-    
+
     static var previews: some View {
         StarterView()
             .environmentObject(userManager)

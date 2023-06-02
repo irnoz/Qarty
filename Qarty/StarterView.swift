@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StarterView: View {
     @EnvironmentObject var userManager: UserManager
-    
+
     @ViewBuilder
     var body: some View {
         VStack {
@@ -26,7 +26,7 @@ struct StarterView: View {
                 .foregroundColor(.red)
                 .padding(.trailing)
             }
-            
+
             if userManager.isRegistered {
                 WelcomeView()
             } else {

@@ -12,28 +12,28 @@ struct RegisterView: View {
     @FocusState var userNameFieldFocused: Bool
     @FocusState var passwordFieldFocused: Bool
     @State var isSecured: Bool = true
-    
+
     var body: some View {
         VStack {
             Spacer()
-            
+
             WelcomeMessageView()
             TextField("Type your name...", text: $userManager.profile.userName)
                 .focused($userNameFieldFocused)
                 .submitLabel(.done)
                 .onSubmit(changeFocusToPassword)
                 .bordered()
-            
+
             HStack {
                 Spacer()
-                
+
                 Text("\(userManager.profile.userName.count)")
                     .font(.caption)
                     .foregroundColor(
                         userManager.isUserNameValid() ? .green : .red)
                     .padding(.trailing)
             }
-            
+
             ZStack(alignment: .trailing) {
                 Group {
                     if isSecured {
@@ -50,26 +50,26 @@ struct RegisterView: View {
 
                 Button(action: {
                     isSecured.toggle()
-                }) {
+                }) { // swiftlint:disable:this multiple_closures_with_trailing_closure
                     Image(systemName: self.isSecured ? "eye.slash" : "eye")
                         .accentColor(.gray)
                 }
                 .padding(.trailing, 5)
             }
-            
+
             HStack {
                 Spacer()
-                
+
                 Text("\(userManager.profile.password.count)")
                     .font(.caption)
                     .foregroundColor(
                         userManager.isPasswordValid() ? .green : .red)
                     .padding(.trailing)
             }
-            
+
             HStack {
                 Spacer()
-                
+
                 Toggle(isOn: $userManager.settings.rememberUser) {
                     Text("Remember me")
                         .font(.subheadline)
@@ -78,7 +78,7 @@ struct RegisterView: View {
                 .fixedSize()
             }
             .padding(.bottom)
-            
+
             Button(action: registerUser) {
                 HStack {
                     Image(systemName: "checkmark")
@@ -104,17 +104,17 @@ struct RegisterView: View {
 extension RegisterView {
     func registerUser() {
         passwordFieldFocused = false
-        
+
         if userManager.settings.rememberUser {
             userManager.persistProfile()
         } else {
             userManager.clear()
         }
-        
+
         userManager.persistSettings()
         userManager.setRegistered()
     }
-    
+
     func changeFocusToPassword() {
         userNameFieldFocused = false
         passwordFieldFocused = true
@@ -123,7 +123,7 @@ extension RegisterView {
 
 struct RegisterView_Previews: PreviewProvider {
     static let user = UserManager(userName: "Irakli", password: "Password")
-    
+
     static var previews: some View {
         RegisterView()
             .environmentObject(user)

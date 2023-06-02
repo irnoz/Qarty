@@ -16,7 +16,7 @@ struct WelcomeBackgroundImage: View {
         .blur(radius: 5)
 //        .aspectRatio(1 / 1, contentMode: .fill)
         .rotationEffect(.degrees(8))
-        
+
     }
 }
 

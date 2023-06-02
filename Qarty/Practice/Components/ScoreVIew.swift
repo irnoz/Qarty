@@ -10,7 +10,7 @@ import SwiftUI
 struct ScoreView: View {
     @Binding var numberOfQuestions: Int
     @Binding var numberOfAnswered: Int
-    
+
     var body: some View {
         HStack {
             Text("\(numberOfAnswered)/\(numberOfQuestions)")
@@ -25,7 +25,7 @@ struct ScoreView: View {
 struct ScoreView_Previews: PreviewProvider {
     @State static var numberOfAnswered: Int = 0
     @State static var numberOfQuestions: Int = 6
-    
+
     static var previews: some View {
         ScoreView(
             numberOfQuestions: $numberOfQuestions,

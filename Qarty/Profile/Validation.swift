@@ -22,7 +22,7 @@ enum ValidationType {
     case minCharacters(min: Int)
     case hasSymbols
     case hasUppercasedLetters
-    
+
     func fulfills(string: String) -> Bool {
         switch self {
         case .isNotEmpty:
@@ -38,12 +38,12 @@ enum ValidationType {
 }
 
 struct Validation: Identifiable {
-    var id: Int
+    var id: Int // swiftlint:disable:this identifier_name
     var field: Field
     var validationType: ValidationType
     var state: ValidationState
-    
-    init(string: String, id: Int, field: Field, validationType: ValidationType) {
+
+    init(string: String, id: Int, field: Field, validationType: ValidationType) { // swiftlint:disable:this identifier_name line_length
         self.id = id
         self.field = field
         self.validationType = validationType

@@ -10,7 +10,7 @@ import SwiftUI
 /// Displays the original word, or question for the practice session.
 struct QuestionView: View {
     var question: String
-    
+
     var body: some View {
         Text(question)
             .font(.system(size: 64))

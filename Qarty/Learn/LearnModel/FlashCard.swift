@@ -8,7 +8,7 @@
 import Foundation
 
 struct FlashCard: Identifiable {
-    var id = UUID()
+    var id = UUID() // swiftlint:disable:this identifier_name
     var card: Challenge
     var isActive = true
 }

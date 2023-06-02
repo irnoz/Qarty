@@ -10,7 +10,7 @@ import SwiftUI
 struct WelcomeView: View {
     @State var startPractice = false
     @EnvironmentObject var userManager: UserManager
-    
+
     @ViewBuilder
     var body: some View {
         if startPractice {
@@ -20,11 +20,11 @@ struct WelcomeView: View {
                 WelcomeBackgroundImage()
                 VStack(alignment: .center) {
                     Spacer()
-                    
+
                     Text(verbatim: "Hello, \(userManager.profile.userName)!")
-                    
+
                     WelcomeMessageView()
-                    
+
                     Button {
                         startPractice.toggle()
                     } label: {
@@ -33,9 +33,9 @@ struct WelcomeView: View {
                             Text("Start Practice")
                         }
                     }
-                    
+
                     Spacer()
-                    
+
                 }
                 .bold()
                 .foregroundColor(.red)

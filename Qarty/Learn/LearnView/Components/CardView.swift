@@ -13,16 +13,16 @@ struct CardView: View {
   @State var revealed = false
   @State var offset: CGSize = .zero
   @GestureState var isLongPressed = false
-  
+
   typealias CardDrag = (_ card: FlashCard, _ direction: DiscardedDirection) -> Void
   let dragged: CardDrag
-  
-  init(_ card: FlashCard, cardColor: Binding<Color>, onDrag dragged: @escaping CardDrag = {_,_  in } ) {
+
+  init(_ card: FlashCard, cardColor: Binding<Color>, onDrag dragged: @escaping CardDrag = {_, _  in }) {
     flashCard = card
     _cardColor = cardColor
     self.dragged = dragged
   }
-  
+
   var body: some View {
     let drag = DragGesture()
       .onChanged { offset = $0.translation }
@@ -37,13 +37,13 @@ struct CardView: View {
           offset = .zero
         }
       }
-    
+
     let longPress = LongPressGesture()
-      .updating($isLongPressed) { value, state, transition in
+      .updating($isLongPressed) { value, state, _ in // was transition instead of _
         state = value
       }
       .simultaneously(with: drag)
-    
+
     return ZStack {
       Rectangle()
         .fill(cardColor)
@@ -80,7 +80,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
   @State static var cardColor = Color.red
-  
+
   static var previews: some View {
     let card = FlashCard(
       card: Challenge(

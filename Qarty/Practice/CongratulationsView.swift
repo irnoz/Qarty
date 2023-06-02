@@ -11,19 +11,19 @@ struct CongratulationsView: View {
     @EnvironmentObject var challengesViewModel: ChallengesViewModel
     let avatarSize: CGFloat = 120
     let userName: String
-    
+
     init(userName: String) {
         self.userName = userName
     }
-    
+
     var body: some View {
         VStack {
             Spacer()
-            
+
             Text("Congratulations!")
                 .font(.title)
                 .foregroundColor(.gray)
-            
+
             ZStack {
                 VStack(spacing: 0) {
                     Rectangle()
@@ -35,7 +35,7 @@ struct CongratulationsView: View {
                         .foregroundColor(
                             Color(red: 0.6, green: 0.1, blue: 0.1).opacity(0.4))
                 }
-                
+
                 Image(systemName: "person.fill")
                     .resizable()
                     .padding()
@@ -43,7 +43,7 @@ struct CongratulationsView: View {
                     .background(Color.white.opacity(0.5))
                     .cornerRadius(avatarSize / 2, antialiased: true)
                     .shadow(radius: 4)
-                
+
                 VStack {
                     Spacer()
                     Text(userName)
@@ -55,13 +55,13 @@ struct CongratulationsView: View {
                 .padding()
             }
             .frame(height: 180)
-            
+
             Text("You’re awesome!")
                 .fontWeight(.bold)
                 .foregroundColor(.gray)
-            
+
             Spacer()
-            
+
             Button {
                 challengesViewModel.restart()
             } label: {

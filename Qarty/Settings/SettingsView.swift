@@ -16,13 +16,13 @@ struct SettingsView: View {
     @AppStorage("dailyReminderEnabled") var dailyReminderEnabled = false
     @State var dailyReminderTime = Date(timeIntervalSince1970: 0)
     @AppStorage("dailyReminderTime") var dailyReminderTimeShadow: Double = 0
-    
+
     var body: some View {
         List {
             Text("Settings")
                 .font(.largeTitle)
                 .padding(.bottom, 8)
-            
+
             Section(header: Text("Appearance")) {
                 VStack(alignment: .leading) {
                     Picker("", selection: $appearance) {
@@ -31,14 +31,14 @@ struct SettingsView: View {
                         }
                     }
                     .pickerStyle(SegmentedPickerStyle())
-                    
+
                     ColorPicker(
                         "Card Background Color",
                         selection: $cardBackgroundColor
                     )
                 }
             }
-            
+
             Section(header: Text("Game")) {
                 VStack(alignment: .leading) {
                     Stepper(
@@ -50,10 +50,10 @@ struct SettingsView: View {
                         .font(.caption2)
                         .foregroundColor(.secondary)
                 }
-                
+
                 Toggle("Learning Enabled", isOn: $learningEnabled)
             }
-            
+
             Section(header: Text("Notifications")) {
                 HStack {
                     Toggle("Daily Reminder", isOn: $dailyReminderEnabled)
@@ -75,7 +75,7 @@ struct SettingsView: View {
             }
         }
     }
-    
+
     func configureNotification() {
         if dailyReminderEnabled {
             LocalNotifications.shared.createReminder(time: dailyReminderTime)

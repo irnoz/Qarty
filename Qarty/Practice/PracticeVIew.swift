@@ -12,7 +12,7 @@ struct PracticeView: View {
     @Binding var challengeTest: ChallengeTest?
     @Binding var userName: String
     @Binding var numberOfAnswered: Int
-    
+
     @ViewBuilder
     var body: some View {
         if challengeTest != nil {
@@ -29,7 +29,7 @@ struct PracticeView_Previews: PreviewProvider {
         challenge: Challenge(question: "კი", pronunciation: "Ki", answer: "Yes"),
         answers: ["Thank you", "Hello", "Goodbye"]
     )
-    
+
     static var previews: some View {
         return PracticeView(
             challengeTest: .constant(challengeTest),
